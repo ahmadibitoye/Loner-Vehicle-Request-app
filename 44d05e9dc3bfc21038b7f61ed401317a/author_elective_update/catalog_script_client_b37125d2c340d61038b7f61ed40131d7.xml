@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="catalog_script_client">
+    <catalog_script_client action="DELETE">
+        <active>true</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>false</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>item</applies_to>
+        <cat_item display_value="Request Loaner Vehicle">e6209efdc3b7861038b7f61ed401311e</cat_item>
+        <cat_variable>IO:89c8deb9c3f7861038b7f61ed40131ea</cat_variable>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Auto populate user location</name>
+        <order/>
+        <published_ref/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+
+	var location = gel('requestor_location');
+
+	if (!location || isLoading)
+		return;
+
+	var request  = new GlideAjax('ServiceCatalogGetLocation');
+	request.addParam('sysparm_name', 'retrieveAddress');
+	request.addParam('sysparm_sysId', g_form.getValue('requested_for'));
+	request.getXML(parseResponse);
+
+	function parseResponse(response) {
+		var address = response.responseXML.documentElement.getAttribute("answer");
+		setLocation(address, true);
+
+		if (typeof g_form != 'undefined' && g_form != null && g_form != '') {
+			var cartId = g_form.getValue('sysparm_cart_id');
+			var location = gel('requestor_location');
+			if (cartId != null && cartId != '' && typeof cartId != 'undefined' && location && !location.hasAttribute('readonly'))
+				catDeliveryAddress(cartId, 'requestor_location');
+		}
+	}
+}
+
+function setLocation(address, focus) {
+	var location = gel('requestor_location');
+
+	if (typeof g_form != 'undefined' && g_form != null && g_form != '') {
+		if (g_form.getControl('requestor_location'))
+			g_form.setValue('requestor_location', address);
+		else
+			location.value = address;
+	}
+
+	if (focus && location && !location.hasAttribute('readonly'))
+		location.focus();
+
+}]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-18 07:50:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b37125d2c340d61038b7f61ed40131d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto populate user location</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loaner Vehicle Request and Inventory" source="x_1326469_lva">44d05e9dc3bfc21038b7f61ed401317a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_update_name>catalog_script_client_b37125d2c340d61038b7f61ed40131d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-18 07:50:38</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <va_supported>false</va_supported>
+        <variable_set/>
+        <view/>
+    </catalog_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</application>
+        <file_path/>
+        <instance_id>c96fb71cdb96f5582f082a59139619de</instance_id>
+        <instance_name>dev199483</instance_name>
+        <name>catalog_script_client_b37125d2c340d61038b7f61ed40131d7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="catalog_script_client"&gt;&lt;catalog_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_catalog&gt;true&lt;/applies_catalog&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;applies_req_item&gt;false&lt;/applies_req_item&gt;&lt;applies_sc_task&gt;false&lt;/applies_sc_task&gt;&lt;applies_target_record&gt;false&lt;/applies_target_record&gt;&lt;applies_to&gt;item&lt;/applies_to&gt;&lt;cat_item display_value="Request Loaner Vehicle"&gt;e6209efdc3b7861038b7f61ed401311e&lt;/cat_item&gt;&lt;cat_variable&gt;IO:89c8deb9c3f7861038b7f61ed40131ea&lt;/cat_variable&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Auto populate user location&lt;/name&gt;&lt;order/&gt;&lt;published_ref/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+
+	var location = gel('requestor_location');
+
+	if (!location || isLoading)
+		return;
+
+	var request  = new GlideAjax('ServiceCatalogGetLocation');
+	request.addParam('sysparm_name', 'retrieveAddress');
+	request.addParam('sysparm_sysId', g_form.getValue('requested_for'));
+	request.getXML(parseResponse);
+
+	function parseResponse(response) {
+		var address = response.responseXML.documentElement.getAttribute("answer");
+		setLocation(address, true);
+
+		if (typeof g_form != 'undefined' &amp;&amp; g_form != null &amp;&amp; g_form != '') {
+			var cartId = g_form.getValue('sysparm_cart_id');
+			var location = gel('requestor_location');
+			if (cartId != null &amp;&amp; cartId != '' &amp;&amp; typeof cartId != 'undefined' &amp;&amp; location &amp;&amp; !location.hasAttribute('readonly'))
+				catDeliveryAddress(cartId, 'requestor_location');
+		}
+	}
+}
+
+function setLocation(address, focus) {
+	var location = gel('requestor_location');
+
+	if (typeof g_form != 'undefined' &amp;&amp; g_form != null &amp;&amp; g_form != '') {
+		if (g_form.getControl('requestor_location'))
+			g_form.setValue('requestor_location', address);
+		else
+			location.value = address;
+	}
+
+	if (focus &amp;&amp; location &amp;&amp; !location.hasAttribute('readonly'))
+		location.focus();
+
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;catalog_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-08-18 07:50:38&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b37125d2c340d61038b7f61ed40131d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Auto populate user location&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Loaner Vehicle Request and Inventory" source="x_1326469_lva"&gt;44d05e9dc3bfc21038b7f61ed401317a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Loaner Vehicle Request and Inventory"&gt;44d05e9dc3bfc21038b7f61ed401317a&lt;/sys_scope&gt;&lt;sys_update_name&gt;catalog_script_client_b37125d2c340d61038b7f61ed40131d7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-08-18 07:50:38&lt;/sys_updated_on&gt;&lt;table/&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;va_supported&gt;false&lt;/va_supported&gt;&lt;variable_set/&gt;&lt;view/&gt;&lt;/catalog_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2118538795</payload_hash>
+        <record_name>Auto populate user location</record_name>
+        <reverted_from/>
+        <source>8cd05e9dc3bfc21038b7f61ed401317b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-18 07:50:38</sys_created_on>
+        <sys_id>a5f5215ac340d61038b7f61ed40131dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19164777fe40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-18 07:50:38</sys_updated_on>
+        <type>Catalog Client Scripts</type>
+        <update_guid>a9f5215aa740d610c9e0a32c16122edc</update_guid>
+        <update_guid_history>a9f5215aa740d610c9e0a32c16122edc:-2118538795</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Auto populate user location">027cfd56c3c0d61038b7f61ed40131ec</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-18 09:28:59</sys_created_on>
+        <sys_db_object display_value="" name="catalog_script_client">catalog_script_client</sys_db_object>
+        <sys_id>7ca32180c18442b89766f1d584619c44</sys_id>
+        <sys_metadata>b37125d2c340d61038b7f61ed40131d7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto populate user location</sys_name>
+        <sys_package display_value="Loaner Vehicle Request and Inventory" source="x_1326469_lva">44d05e9dc3bfc21038b7f61ed401317a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_scope_delete display_value="">00be76da1f064a408004cfc01fac5979</sys_scope_delete>
+        <sys_update_name>catalog_script_client_b37125d2c340d61038b7f61ed40131d7</sys_update_name>
+        <sys_update_version display_value="catalog_script_client_b37125d2c340d61038b7f61ed40131d7">a5f5215ac340d61038b7f61ed40131dd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-18 09:28:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

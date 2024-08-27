@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>labelCacheCleanUpExecuted=true</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>this is the flow for loaner vehicle request</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>loaner_vehicle_flow_2</internal_name>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Loaner Vehicle Catalog Record","reference":"x_1326469_lva_loaner_vehicle_catalog","reference_display":"Loaner Vehicle Catalog","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"f6596463-d5a3-44c5-9e65-36b9b6e01ce0":["ah_requested_item"],"4e170ead-f377-4ff4-8791-0917eb5c0a2b":["record"],"4f7e3c7a-01e6-46ee-bd4a-6fd17d313aa1":["requested_item"],"9badc33d-f64c-4c9e-8df5-f5e01ca4163f":["record"],"61d50886-2ba8-4a09-b414-f5658d4c6316":["record"],"0fb92d87-4f73-470f-83a6-af2af4ac4867":["number"]},"attributes":null},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Loaner Vehicle Catalog Table","reference":"x_1326469_lva_loaner_vehicle_catalog","reference_display":"Loaner Vehicle Catalog","type":"table_name","base_type":"table_name","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":null},{"name":"4f7e3c7a-01e6-46ee-bd4a-6fd17d313aa1.vehicle_needed.number","label":"1 - Get Catalog Variables➛vehicle_needed➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"0fb92d87-4f73-470f-83a6-af2af4ac4867":["number"]},"attributes":null},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Loaner Vehicle Catalog Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"0fb92d87-4f73-470f-83a6-af2af4ac4867":["number"]},"attributes":null},{"name":"4f7e3c7a-01e6-46ee-bd4a-6fd17d313aa1.vehicle_needed","label":"1 - Get Catalog Variables➛vehicle_needed","reference":"x_1326469_lva_loaner_vehicle_catalog","reference_display":"vehicle_needed","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"0fb92d87-4f73-470f-83a6-af2af4ac4867":["assigned_to"]},"attributes":null},{"name":"{{static.3fa44afac380121038b7f61ed401313d}}","label":"Loaner Vehicle Approvers","reference":"sys_user_group","reference_display":"","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"4e170ead-f377-4ff4-8791-0917eb5c0a2b":["approval_conditions"]},"attributes":null},{"name":"4e170ead-f377-4ff4-8791-0917eb5c0a2b.approval_state","label":"3 - Ask For Approval➛Approval State","reference":"","reference_display":"Approval State","type":"choice","base_type":"choice","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"bcc6929e-79de-4263-b4fe-4bfe93b8c5b9":["condition"]},"attributes":null},{"name":"0fb92d87-4f73-470f-83a6-af2af4ac4867.record","label":"2 - Create Record➛Vehicle Tracker Record","reference":"x_1326469_lva_vehicle_tracker","reference_display":"Vehicle Tracker","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"9badc33d-f64c-4c9e-8df5-f5e01ca4163f":["record"]},"attributes":null},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Loaner Vehicle Catalog Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":null}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Loaner Vehicle Flow 2</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:14:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>54c252d8c358d61038b7f61ed401317c</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_name>Loaner Vehicle Flow 2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loaner Vehicle Request and Inventory" source="x_1326469_lva">44d05e9dc3bfc21038b7f61ed401317a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_update_name>sys_hub_flow_54c252d8c358d61038b7f61ed401317c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 17:26:02</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=54c252d8c358d61038b7f61ed401317c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=54c252d8c358d61038b7f61ed401317c"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=54c252d8c358d61038b7f61ed401317c^sys_idNOT IN55e21a98c398d61038b7f61ed40131e1"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Loaner Vehicle Flow 2">54c252d8c358d61038b7f61ed401317c</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:14:48</sys_created_on>
+        <sys_id>55e21a98c398d61038b7f61ed40131e1</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 17:25:54</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=55e21a98c398d61038b7f61ed40131e1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>55e21a98c398d61038b7f61ed40131e1</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:14:48</sys_created_on>
+        <sys_id>91e21a98c398d61038b7f61ed40131e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:14:48</sys_updated_on>
+        <value>x_1326469_lva_loaner_vehicle_catalog</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>55e21a98c398d61038b7f61ed40131e1</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:14:48</sys_created_on>
+        <sys_id>dde21a98c398d61038b7f61ed40131e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:14:48</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=54c252d8c358d61038b7f61ed401317c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=54c252d8c358d61038b7f61ed401317c^sys_idNOT IN50c252d8c358d61038b7f61ed401317d"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>54c252d8c358d61038b7f61ed401317c</id>
+        <name>Loaner Vehicle Flow 2</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:14:11</sys_created_on>
+        <sys_id>50c252d8c358d61038b7f61ed401317d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:14:11</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=50c252d8c358d61038b7f61ed401317d"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=54c252d8c358d61038b7f61ed401317c"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=54c252d8c358d61038b7f61ed401317c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=54c252d8c358d61038b7f61ed401317c"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=54c252d8c358d61038b7f61ed401317c^sys_idNOT IN0813169cc398d61038b7f61ed40131fc,3ccc1e14c3d8d61038b7f61ed4013147,477352dcc398d61038b7f61ed4013186,6fb7d290c3d8d61038b7f61ed4013182,e6165a50c3d8d61038b7f61ed40131d8"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Loaner Vehicle Flow 2">54c252d8c358d61038b7f61ed401317c</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:15:32</sys_created_on>
+        <sys_id>0813169cc398d61038b7f61ed40131fc</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:16:43</sys_updated_on>
+        <ui_id>4f7e3c7a-01e6-46ee-bd4a-6fd17d313aa1</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0813169cc398d61038b7f61ed40131fc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0813169cc398d61038b7f61ed40131fc</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:16:43</sys_created_on>
+        <sys_id>195392dcc398d61038b7f61ed40131a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:16:43</sys_updated_on>
+        <value>b3311a71c3f7861038b7f61ed401311e:item_option_new,89c8deb9c3f7861038b7f61ed40131ea:item_option_new,ad89563dc3f7861038b7f61ed40131df:item_option_new,615ad27dc3f7861038b7f61ed40131de:item_option_new,c49adef9c3f7861038b7f61ed40131fb:item_option_new,bbdad27dc3f7861038b7f61ed4013126:item_option_new,372b5abdc3f7861038b7f61ed40131e9:item_option_new,725b1a7dc3f7861038b7f61ed4013111:item_option_new</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0813169cc398d61038b7f61ed40131fc</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:16:43</sys_created_on>
+        <sys_id>d95392dcc398d61038b7f61ed40131a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:16:43</sys_updated_on>
+        <value>{"sys_id":"e6209efdc3b7861038b7f61ed401311e","display":"Request Loaner Vehicle","value":"e6209efdc3b7861038b7f61ed401311e","data_source":"sc_cat_item"}</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0813169cc398d61038b7f61ed40131fc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>catalog_variables</field>
+        <id>0813169cc398d61038b7f61ed40131fc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:16:43</sys_created_on>
+        <sys_id>115392dcc398d61038b7f61ed40131a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:16:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>requested_item</field>
+        <id>0813169cc398d61038b7f61ed40131fc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:16:43</sys_created_on>
+        <sys_id>955392dcc398d61038b7f61ed40131a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:16:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>template_catalog_item</field>
+        <id>0813169cc398d61038b7f61ed40131fc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:16:43</sys_created_on>
+        <sys_id>d15392dcc398d61038b7f61ed40131a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:16:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0813169cc398d61038b7f61ed40131fc"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0813169cc398d61038b7f61ed40131fc"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Loaner Vehicle Flow 2">54c252d8c358d61038b7f61ed401317c</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>bcc6929e-79de-4263-b4fe-4bfe93b8c5b9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:57:55</sys_created_on>
+        <sys_id>3ccc1e14c3d8d61038b7f61ed4013147</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 17:04:44</sys_updated_on>
+        <ui_id>9badc33d-f64c-4c9e-8df5-f5e01ca4163f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3ccc1e14c3d8d61038b7f61ed4013147"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3ccc1e14c3d8d61038b7f61ed4013147</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 17:04:44</sys_created_on>
+        <sys_id>345ede1cc3d8d61038b7f61ed40131f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 17:04:44</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3ccc1e14c3d8d61038b7f61ed4013147</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 17:04:44</sys_created_on>
+        <sys_id>705ede1cc3d8d61038b7f61ed40131f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 17:04:44</sys_updated_on>
+        <value>state=3</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1^id=3ccc1e14c3d8d61038b7f61ed4013147"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3ccc1e14c3d8d61038b7f61ed4013147"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3ccc1e14c3d8d61038b7f61ed4013147"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Loaner Vehicle Flow 2">54c252d8c358d61038b7f61ed401317c</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:17:23</sys_created_on>
+        <sys_id>477352dcc398d61038b7f61ed4013186</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:28:33</sys_updated_on>
+        <ui_id>0fb92d87-4f73-470f-83a6-af2af4ac4867</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=477352dcc398d61038b7f61ed4013186"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>477352dcc398d61038b7f61ed4013186</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:25:33</sys_created_on>
+        <sys_id>66559edcc398d61038b7f61ed4013116</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:25:33</sys_updated_on>
+        <value>x_1326469_lva_vehicle_tracker</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=477352dcc398d61038b7f61ed4013186"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>477352dcc398d61038b7f61ed4013186</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:25:33</sys_created_on>
+        <sys_id>22559edcc398d61038b7f61ed4013116</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:25:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>477352dcc398d61038b7f61ed4013186</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:25:33</sys_created_on>
+        <sys_id>e2559edcc398d61038b7f61ed4013116</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:28:33</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>number={{Created_1.current}}^assigned_to={{4f7e3c7a-01e6-46ee-bd4a-6fd17d313aa1.vehicle_needed}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=477352dcc398d61038b7f61ed4013186"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=477352dcc398d61038b7f61ed4013186"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Catalog Task">af51fd0e73141300612c273ffff6a785</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Loaner Vehicle Flow 2">54c252d8c358d61038b7f61ed401317c</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>bcc6929e-79de-4263-b4fe-4bfe93b8c5b9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:35:59</sys_created_on>
+        <sys_id>6fb7d290c3d8d61038b7f61ed4013182</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:56:06</sys_updated_on>
+        <ui_id>f6596463-d5a3-44c5-9e65-36b9b6e01ce0</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6fb7d290c3d8d61038b7f61ed4013182"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6fb7d290c3d8d61038b7f61ed4013182</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:39:07</sys_created_on>
+        <sys_id>29789a54c3d8d61038b7f61ed40131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:39:07</sys_updated_on>
+        <value>b3311a71c3f7861038b7f61ed401311e:item_option_new,89c8deb9c3f7861038b7f61ed40131ea:item_option_new,ad89563dc3f7861038b7f61ed40131df:item_option_new,615ad27dc3f7861038b7f61ed40131de:item_option_new,c49adef9c3f7861038b7f61ed40131fb:item_option_new,bbdad27dc3f7861038b7f61ed4013126:item_option_new,372b5abdc3f7861038b7f61ed40131e9:item_option_new,725b1a7dc3f7861038b7f61ed4013111:item_option_new</value>
+        <variable display_value="Catalog Variables">7b51fd0e73141300612c273ffff6a7be</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6fb7d290c3d8d61038b7f61ed4013182</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:39:07</sys_created_on>
+        <sys_id>61789a54c3d8d61038b7f61ed40131d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:39:07</sys_updated_on>
+        <value>assignment_group={"display":"Loaner Vehicle Delivery","value":"72e40efac380121038b7f61ed401310d","sys_id":"72e40efac380121038b7f61ed401310d"}</value>
+        <variable display_value="Fields">7751fd0e73141300612c273ffff6a7ac</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6fb7d290c3d8d61038b7f61ed4013182</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:39:07</sys_created_on>
+        <sys_id>ad789a54c3d8d61038b7f61ed40131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:39:07</sys_updated_on>
+        <value>{"sys_id":"e6209efdc3b7861038b7f61ed401311e","display":"Request Loaner Vehicle","value":"e6209efdc3b7861038b7f61ed401311e","table":"sc_cat_item"}</value>
+        <variable display_value="Template Catalog Item">f751fd0e73141300612c273ffff6a7b8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6fb7d290c3d8d61038b7f61ed4013182</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:39:07</sys_created_on>
+        <sys_id>e9789a54c3d8d61038b7f61ed40131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:39:07</sys_updated_on>
+        <value>Loaner Vehicle ------- Delivery Task</value>
+        <variable display_value="Short Description">3751fd0e73141300612c273ffff6a7a6</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6fb7d290c3d8d61038b7f61ed4013182"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_fields</field>
+        <id>6fb7d290c3d8d61038b7f61ed4013182</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:39:07</sys_created_on>
+        <sys_id>a5789a54c3d8d61038b7f61ed40131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:39:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_af51fd0e73141300612c273ffff6a785</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_requested_item</field>
+        <id>6fb7d290c3d8d61038b7f61ed4013182</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:39:07</sys_created_on>
+        <sys_id>21789a54c3d8d61038b7f61ed40131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:39:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_af51fd0e73141300612c273ffff6a785</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_short_description</field>
+        <id>6fb7d290c3d8d61038b7f61ed4013182</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:39:07</sys_created_on>
+        <sys_id>6d789a54c3d8d61038b7f61ed40131d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:39:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_af51fd0e73141300612c273ffff6a785</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>catalog_variables</field>
+        <id>6fb7d290c3d8d61038b7f61ed4013182</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:39:07</sys_created_on>
+        <sys_id>a9789a54c3d8d61038b7f61ed40131d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:39:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_af51fd0e73141300612c273ffff6a785</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>template_catalog_item</field>
+        <id>6fb7d290c3d8d61038b7f61ed4013182</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:39:07</sys_created_on>
+        <sys_id>e1789a54c3d8d61038b7f61ed40131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:39:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_af51fd0e73141300612c273ffff6a785</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6fb7d290c3d8d61038b7f61ed4013182"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6fb7d290c3d8d61038b7f61ed4013182"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Loaner Vehicle Flow 2">54c252d8c358d61038b7f61ed401317c</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:28:49</sys_created_on>
+        <sys_id>e6165a50c3d8d61038b7f61ed40131d8</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:31:04</sys_updated_on>
+        <ui_id>4e170ead-f377-4ff4-8791-0917eb5c0a2b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e6165a50c3d8d61038b7f61ed40131d8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e6165a50c3d8d61038b7f61ed40131d8</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:30:57</sys_created_on>
+        <sys_id>359612d0c3d8d61038b7f61ed401311f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:30:57</sys_updated_on>
+        <value>x_1326469_lva_loaner_vehicle_catalog</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e6165a50c3d8d61038b7f61ed40131d8</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:30:57</sys_created_on>
+        <sys_id>719612d0c3d8d61038b7f61ed401311f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:30:57</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e6165a50c3d8d61038b7f61ed40131d8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>e6165a50c3d8d61038b7f61ed40131d8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:30:57</sys_created_on>
+        <sys_id>3d9612d0c3d8d61038b7f61ed401311e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:30:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyG[{{static.3fa44afac380121038b7f61ed401313d}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>e6165a50c3d8d61038b7f61ed40131d8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:30:57</sys_created_on>
+        <sys_id>799612d0c3d8d61038b7f61ed401311e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:30:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>e6165a50c3d8d61038b7f61ed40131d8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:30:57</sys_created_on>
+        <sys_id>b59612d0c3d8d61038b7f61ed401311e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:30:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>e6165a50c3d8d61038b7f61ed40131d8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:30:57</sys_created_on>
+        <sys_id>fd9612d0c3d8d61038b7f61ed401311e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:30:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e6165a50c3d8d61038b7f61ed40131d8"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e6165a50c3d8d61038b7f61ed40131d8"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=54c252d8c358d61038b7f61ed401317c"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=54c252d8c358d61038b7f61ed401317c^sys_idNOT INe7e61610c3d8d61038b7f61ed4013105"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">38cc12d8c3d8d61038b7f61ed4013109</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Loaner Vehicle Flow 2">54c252d8c358d61038b7f61ed401317c</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:32:26</sys_created_on>
+        <sys_id>e7e61610c3d8d61038b7f61ed4013105</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:57:55</sys_updated_on>
+        <ui_id>bcc6929e-79de-4263-b4fe-4bfe93b8c5b9</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e7e61610c3d8d61038b7f61ed4013105"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e7e61610c3d8d61038b7f61ed4013105</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:32:43</sys_created_on>
+        <sys_id>fbf612d0c3d8d61038b7f61ed4013126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:32:43</sys_updated_on>
+        <value>Approved</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e7e61610c3d8d61038b7f61ed4013105"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>e7e61610c3d8d61038b7f61ed4013105</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:32:43</sys_created_on>
+        <sys_id>7bf612d0c3d8d61038b7f61ed4013126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:32:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{4e170ead-f377-4ff4-8791-0917eb5c0a2b.approval_state}}=approved</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>e7e61610c3d8d61038b7f61ed4013105</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-24 16:32:43</sys_created_on>
+        <sys_id>b7f612d0c3d8d61038b7f61ed4013126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-24 16:32:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e7e61610c3d8d61038b7f61ed4013105"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e7e61610c3d8d61038b7f61ed4013105"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=54c252d8c358d61038b7f61ed401317c"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=54c252d8c358d61038b7f61ed401317c"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_54c252d8c358d61038b7f61ed401317c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_54c252d8c358d61038b7f61ed401317c"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_54c252d8c358d61038b7f61ed401317c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_54c252d8c358d61038b7f61ed401317c"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=54c252d8c358d61038b7f61ed401317c"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=54c252d8c358d61038b7f61ed401317c"/>
+</record_update>
