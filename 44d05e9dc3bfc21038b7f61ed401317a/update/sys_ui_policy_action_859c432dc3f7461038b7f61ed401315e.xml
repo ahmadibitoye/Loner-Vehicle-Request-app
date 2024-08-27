@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>expected_return_date</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-03 21:07:59</sys_created_on>
+        <sys_id>859c432dc3f7461038b7f61ed401315e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>expected_return_date</sys_name>
+        <sys_package display_value="Loaner Vehicle Request and Inventory" source="x_1326469_lva">44d05e9dc3bfc21038b7f61ed401317a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_update_name>sys_ui_policy_action_859c432dc3f7461038b7f61ed401315e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-03 21:07:59</sys_updated_on>
+        <table>x_1326469_lva_vehicle_tracker</table>
+        <ui_policy display_value="Make Assigned to, Location, Date Requested, Expected Return Date Mandatory if Vehicle Status is Pending Release or Out on Field ">cfbb8fa9c3f7461038b7f61ed401316d</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=859c432dc3f7461038b7f61ed401315e"/>
+</record_update>

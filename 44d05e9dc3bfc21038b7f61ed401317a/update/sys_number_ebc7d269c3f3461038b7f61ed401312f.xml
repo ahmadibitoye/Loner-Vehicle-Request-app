@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_1326469_lva_vehicle_servicing">x_1326469_lva_vehicle_servicing</category>
+        <maximum_digits>5</maximum_digits>
+        <number>1000</number>
+        <prefix>VS</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-03 17:17:16</sys_created_on>
+        <sys_id>ebc7d269c3f3461038b7f61ed401312f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>VS</sys_name>
+        <sys_package display_value="Loaner Vehicle Request and Inventory" source="x_1326469_lva">44d05e9dc3bfc21038b7f61ed401317a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+        <sys_update_name>sys_number_ebc7d269c3f3461038b7f61ed401312f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-03 17:17:16</sys_updated_on>
+    </sys_number>
+</record_update>

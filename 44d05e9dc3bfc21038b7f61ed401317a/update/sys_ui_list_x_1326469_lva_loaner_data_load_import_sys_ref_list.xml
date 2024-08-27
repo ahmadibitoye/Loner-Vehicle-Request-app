@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_1326469_lva_loaner_data_load_import" version="2" view="sys_ref_list">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_import_row</element>
+            <list_id display_value="x_1326469_lva_loaner_data_load_import" element="NULL" name="x_1326469_lva_loaner_data_load_import" parent="NULL" relationship="NULL" sys_domain="global" view="632ca1528d30021087de63ac7f1f0028">a083dea1c3f3461038b7f61ed40131ee</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-03 16:58:30</sys_created_on>
+            <sys_id>2483dea1c3f3461038b7f61ed40131ef</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-03 16:58:30</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_1326469_lva_loaner_data_load_import</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-08-03 16:58:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a083dea1c3f3461038b7f61ed40131ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1326469_lva_loaner_data_load_import</sys_name>
+            <sys_package display_value="Loaner Vehicle Request and Inventory" source="x_1326469_lva">44d05e9dc3bfc21038b7f61ed401317a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Loaner Vehicle Request and Inventory">44d05e9dc3bfc21038b7f61ed401317a</sys_scope>
+            <sys_update_name>sys_ui_list_x_1326469_lva_loaner_data_load_import_sys_ref_list</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-08-03 16:58:30</sys_updated_on>
+            <sys_user/>
+            <view display_value="Reference List" name="sys_ref_list">632ca1528d30021087de63ac7f1f0028</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>
